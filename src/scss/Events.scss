@@ -1,0 +1,127 @@
+@import 'variables';
+
+.Events {
+    background: white;
+    cursor: default;
+    padding: 30px;
+    #events-top {
+        padding-bottom: 15px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            .title {
+
+            }
+            .event-types {
+                display: flex;
+                div {
+                    padding: 5px 10px;
+                    background: white;
+                    margin-right: 15px;
+                    border-radius: 50%;
+                    color: #656565;
+                    font-weight: 600;
+                    background-position: right bottom;
+                    transition: all .5s ease-out;
+                    font-size: 0.9rem;
+                    border: 1px solid white;
+                    font-weight: 300;
+                    span {
+                        transition: all 0.4s ease-in-out;
+                    }
+                    &.business {
+                        background: linear-gradient(to right, $blue 50%, $lightBlue 50%);
+                        background-size: 210% 100%;
+                        background-position: right bottom;
+                        &:hover {
+                            background-position: left bottom;
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    &.school {
+                        background: linear-gradient(to right, $pink 50%, $lightPink 50%);
+                        background-size: 210% 100%;
+                        background-position: right bottom;
+                        &:hover {
+                            background-position: left bottom;
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    &.personal {
+                        background: linear-gradient(to right, $green 50%, $lightGreen 50%);
+                        background-size: 210% 100%;
+                        background-position: right bottom;
+                        margin: 0;
+                        &:hover {
+                            background-position: left bottom;
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                    span {
+
+                    }
+                }
+            }
+        }
+    }
+    #events-content {
+        display: grid;
+        justify-content: center;
+        grid-template-columns:  repeat(3, 33%);
+        grid-gap: 30px;
+        padding: 15px;
+        margin-top: 15px;
+        .event {
+            background: white;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: all 0.5s ease-in-out;
+            border-bottom: 3px solid transparent;
+            background: #fafafa;
+            &:hover {
+                transform: translate3d(0, -10px, 0);
+            }
+            .type {
+                max-width: 75px;
+                text-align: center;
+                padding: 5px 10px;
+                border-radius: 18px;
+                font-weight: 300;
+                font-size: 0.8rem;
+                &.blue {
+                    color: #5393FE;
+                    background: #E3F2FD;
+                }
+                &.green {
+                    color: #66BA6A;
+                    background: #E8F5E9;
+                }
+                &.yellow {
+                    color: #F6538B;
+                    background: #FDE4EC;
+                }
+            }
+            h2 {
+                max-width: 250px;
+                font-size: 1rem;
+                text-transform: capitalize;
+                margin: 15px 0;
+            }
+            span {
+                font-weight: 300;
+                color: #c0c0c0;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}

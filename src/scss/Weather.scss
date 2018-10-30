@@ -1,0 +1,79 @@
+@import './variables';
+
+.Weather {
+    #weather {
+        background: white;
+        cursor: default;
+        .time {
+            background: $main;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            &:hover {
+                .am-pm {
+                    transform: translate3d(0, -8px, 0);
+                    span {
+                        &:first-of-type {
+                            opacity: 0;
+                        }
+                        &:last-of-type {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            #time {
+                font-size: 1.7rem;
+                font-weight: 300;
+                color: white;
+            }
+            .am-pm {
+                margin-left: 15px;
+                display: flex;
+                flex-direction: column;
+                transform: translate3d(0, 8px, 0);
+                transition: all 0.4s ease-in-out;
+                span {
+                    transition: all 0.4s ease-in-out;
+                    font-size: 0.75rem;
+                    font-weight: 300;
+                    color: white;
+                    &:first-of-type {
+
+                    }
+                    &:last-of-type {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .forecast {
+            display: flex;
+            .col {
+                padding: 30px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: white;
+                width: 33%;
+                border-right: 2px solid #fafafa;
+                &:last-of-type {
+                    border: none;
+                }
+                .day {
+                    font-weight: 300;
+                }
+                i {
+                    color: $main;
+                    margin: 30px;
+                }
+                .high-low {
+                    font-weight: 300;
+                    color: #c0c0c0;
+                }
+            }
+        }
+    }
+}

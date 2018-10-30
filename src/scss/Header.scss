@@ -1,0 +1,38 @@
+@import 'variables';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: white;
+    align-items: center;
+    .logo {
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        .img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-image: url('https://randomuser.me/api/portraits/men/32.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+            -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+            box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+        }
+        .edit {
+            cursor: pointer;
+            font-weight: 300;
+            i {
+                margin-left: 15px;
+            }
+        }
+    }
+}
