@@ -3,29 +3,96 @@
 .Tasks {
     background: white;
     #tasks {
+        padding: 15px 30px;
         .header {
-            padding: 15px;
+            padding-bottom: 30px;
             display: flex;
             justify-content: space-between;
             h1 {
                 font-size: 1.5rem;
             }
-            span {
-                font-size: 0.825rem;
-                background: $main;
-                color: white;
-                padding: 5px 15px;
-                border-radius: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                border: 2px solid transparent;
-                transition: all 0.4s ease-in-out;
-                &:hover {
+        }
+
+        .content {
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                    font-size: 0.925rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    i {
+                        font-size: 1rem;
+                        opacity: 0;
+                        transform: translate3d(25px, 0, 0);
+                        transition: all 0.4s ease-in-out;
+                        color: #ff4e4e;
+                        cursor: pointer;
+                        padding: 5px;
+                    }
+                    &:hover {
+                        i {
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                        }
+                    }
+                }
+            }
+            .styled-checkbox {
+                position: absolute; // take it out of document flow
+                opacity: 0; // hide it
+                & + label {
+                    position: relative;
+                    cursor: pointer;
+                    padding: 0;
+                }
+                // Box.
+                & + label:before {
+                    margin-right: 15px;
+                    content: '';
+                    display: inline-block;
+                    vertical-align: text-top;
+                    width: 15px;
+                    height: 15px;
                     background: white;
-                    color: $main;
-                    border-color: $main;
+                    border: 2px solid $main;
+                    transition: all 0.4s ease-in-out;
+                    }
+                    // Box focus
+                    &:focus + label:before {
+                        -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                        -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                        box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                    }
+
+                    &:checked + label {
+                        
+                    }
+
+                    // Box checked
+                    &:checked + label:before {
+                        background: $main;
+                    }
+
+                    // Checkmark. Could be replaced with an image
+                    &:checked + label:after {
+                        content: '';
+                        position: absolute;
+                        left: 4px;
+                        top: 9px;
+                        background: white;
+                        width: 2px;
+                        height: 2px;
+                        box-shadow: 
+                        2px 0 0 white,
+                        4px 0 0 white,
+                        4px -2px 0 white,
+                        4px -4px 0 white,
+                        4px -6px 0 white,
+                        4px -8px 0 white;
+                        transform: rotate(45deg);
                 }
             }
         }

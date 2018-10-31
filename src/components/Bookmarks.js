@@ -14,7 +14,7 @@ class Bookmarks extends Component {
 
                     <div className="header">
                         <div className="title">
-                            <h2>Bookmark</h2>
+                            <h2>Bookmarks</h2>
                         </div>
                         <div className="bookmark-add">
                             <span id="bookmark-add">Add Bookmark <i className="fas fa-plus"></i></span>
