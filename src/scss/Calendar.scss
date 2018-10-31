@@ -10,6 +10,9 @@
             margin-bottom: 30px;
             justify-content: space-between;
             font-weight: 600;
+            i {
+                cursor: pointer;
+            }
         }
         .weekdays {
             display: grid;
@@ -17,7 +20,8 @@
             justify-content: center;
             text-align: center;
             margin-bottom: 15px;
-            grid-gap: 15px;
+            grid-row-gap: 15px;
+            grid-column-gap: 30px;
             span {
                 color: $main;
             }
@@ -26,9 +30,10 @@
             display: grid;
             grid-template-columns: repeat(7, 30px);
             grid-template-rows: repeat(5, 30px);
-            grid-gap: 15px;
+            grid-row-gap: 15px;
+            grid-column-gap: 30px;
             justify-content: center;
-            font-size: 0.925rem;
+            font-size: 1rem;
             .day {
                 display: flex;
                 align-items: center;
