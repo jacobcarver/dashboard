@@ -53,7 +53,11 @@ body {
         }
         // Calendar Component
         .Calendar {
-
+            grid-column: 2 / 7;
+            grid-row: 5 / 8;
+            -webkit-box-shadow: 0px 0px 21px 3px rgba(219, 219, 219, 0.3);
+            -moz-box-shadow: 0px 0px 21px 3px rgba(219, 219, 219, 0.3);
+            box-shadow: 0px 0px 21px 3px rgba(219, 219, 219, 0.3);
         }
     }
 }
