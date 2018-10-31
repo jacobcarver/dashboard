@@ -9,7 +9,7 @@ import Bookmarks from './components/Bookmarks';
 import Header from './components/Header';
 import Weather from './components/Weather';
 import Tasks from './components/Tasks';
-// import Tasks from './components/Tasks';
+import Calendar from './components/Calendar';
 
 class App extends Component {
   render() {
@@ -21,6 +21,7 @@ class App extends Component {
           <Weather />
           <Bookmarks />
           <Tasks />
+          <Calendar />
         </div>
       </div>
     );
