@@ -8,6 +8,7 @@ import Events from './components/Events';
 import Bookmarks from './components/Bookmarks';
 import Header from './components/Header';
 import Weather from './components/Weather';
+import Tasks from './components/Tasks';
 // import Tasks from './components/Tasks';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Events />
           <Weather />
           <Bookmarks />
+          <Tasks />
         </div>
       </div>
     );

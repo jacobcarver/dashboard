@@ -1,0 +1,33 @@
+@import './variables';
+
+.Tasks {
+    background: white;
+    #tasks {
+        .header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            h1 {
+                font-size: 1.5rem;
+            }
+            span {
+                font-size: 0.825rem;
+                background: $main;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: all 0.4s ease-in-out;
+                &:hover {
+                    background: white;
+                    color: $main;
+                    border-color: $main;
+                }
+            }
+        }
+    }
+}
