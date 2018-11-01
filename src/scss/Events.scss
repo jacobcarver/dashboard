@@ -84,9 +84,9 @@
     #events-content {
         display: grid;
         justify-content: center;
-        grid-template-columns:  repeat(3, 33%);
+        grid-template-columns:  repeat(3, 33.33%);
         grid-gap: 30px;
-        padding: 15px 30px;
+        padding: 0 30px;
         margin-top: 15px;
         .event {
             background: white;
@@ -121,10 +121,11 @@
                 }
             }
             h2 {
-                max-width: 250px;
                 font-size: 1rem;
                 text-transform: capitalize;
                 margin: 15px 0;
+                max-width: 150px;
+                overflow: hidden;
             }
             span {
                 font-weight: 300;
@@ -133,4 +134,27 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+    .Events {
+        #events-content {
+            display: grid;
+            justify-content: center;
+            grid-template-columns:  repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 30px;
+            padding: 0 30px;
+            margin-top: 15px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }

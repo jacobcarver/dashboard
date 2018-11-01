@@ -72,6 +72,8 @@
 
                         }
                         &.link {
+                            // min-width: 150px;
+                            text-align: right;
                             color: #4b8aff;
                             transition: all 0.3s ease-in-out;
                             cursor: pointer;
@@ -90,4 +92,17 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }

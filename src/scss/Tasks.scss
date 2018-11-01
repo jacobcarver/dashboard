@@ -9,9 +9,6 @@
             padding-bottom: 30px;
             display: flex;
             justify-content: space-between;
-            h1 {
-                font-size: 1.5rem;
-            }
         }
 
         .content {
@@ -24,21 +21,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    i {
-                        font-size: 1rem;
-                        opacity: 0;
-                        transform: translate3d(25px, 0, 0);
-                        transition: all 0.4s ease-in-out;
-                        color: #ff4e4e;
-                        cursor: pointer;
-                        padding: 5px;
-                    }
-                    &:hover {
-                        i {
-                            opacity: 1;
-                            transform: translate3d(0, 0, 0);
-                        }
-                    }
+                    line-height: 1.1;
                 }
             }
             .styled-checkbox {
@@ -55,11 +38,11 @@
                     content: '';
                     display: inline-block;
                     vertical-align: text-top;
-                    width: 15px;
-                    height: 15px;
+                    width: 20px;
+                    height: 20px;
                     background: white;
                     border: 2px solid $main;
-                    transition: all 0.4s ease-in-out;
+                    border-radius: 50%;
                     }
                     // Box focus
                     &:focus + label:before {
@@ -69,7 +52,7 @@
                     }
 
                     &:checked + label {
-                        
+                        text-decoration: line-through;
                     }
 
                     // Box checked
@@ -81,8 +64,8 @@
                     &:checked + label:after {
                         content: '';
                         position: absolute;
-                        left: 4px;
-                        top: 9px;
+                        left: 6px;
+                        top: 12px;
                         background: white;
                         width: 2px;
                         height: 2px;
@@ -98,4 +81,17 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }

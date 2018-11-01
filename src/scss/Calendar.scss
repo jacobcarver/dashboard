@@ -16,36 +16,43 @@
         }
         .weekdays {
             display: grid;
-            grid-template-columns: repeat(7, 30px);
+            grid-template-columns: repeat(7, 1fr);
             justify-content: center;
             text-align: center;
             margin-bottom: 15px;
             grid-row-gap: 15px;
-            grid-column-gap: 30px;
+            grid-column-gap: 5%;
+            // padding: 0 30px;
             span {
                 color: $main;
             }
         }
         #days {
             display: grid;
-            grid-template-columns: repeat(7, 30px);
-            grid-template-rows: repeat(5, 30px);
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             grid-row-gap: 15px;
-            grid-column-gap: 30px;
+            grid-column-gap: 5%;
             justify-content: center;
             font-size: 1rem;
             .day {
                 display: flex;
+                margin: 0 auto;
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
                 transition: all 0.4s ease-in-out;
+                height: 30px;
+                width: 30px;
                 &.current {
                     background: $main;
                     color: white;
                 }
                 &.empty {
                     color: #e0e0e0;
+                    &:hover {
+                        background: none;
+                    }
                 }
                 &:hover {
                     background: #e0e0e0;
@@ -53,4 +60,29 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+    .Calendar {
+        #calendar {
+            .month-selection {
+
+            }
+            .weekdays {
+
+            }
+            #days {
+
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }

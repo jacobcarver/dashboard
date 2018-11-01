@@ -51,7 +51,7 @@
         .forecast {
             display: flex;
             .col {
-                padding: 40px 5px;
+                padding: 30px 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -78,4 +78,17 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px) {
+
 }
