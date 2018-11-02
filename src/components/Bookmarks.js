@@ -22,7 +22,6 @@ class Bookmarks extends Component {
                     </div>
 
                     <div className="content">
-
                         <div className="bookmark">
                             <div className="top">
                                 <div className="category school">School</div>
@@ -33,7 +32,6 @@ class Bookmarks extends Component {
                                 <h3 className="link"><i className="fas fa-cloud-download-alt"></i> Download PDF</h3>
                             </div>
                         </div>
-
                         <div className="bookmark">
                             <div className="top">
                                 <div className="category business">Business</div>
@@ -44,7 +42,6 @@ class Bookmarks extends Component {
                                 <h3 className="link"><i className="far fa-file-alt"></i> View Doc</h3>
                             </div>
                         </div>
-
                         <div className="bookmark">
                             <div className="top">
                                 <div className="category personal">Personal</div>
@@ -55,7 +52,6 @@ class Bookmarks extends Component {
                                 <h3 className="link"><i className="far fa-credit-card"></i> View Balance</h3>
                             </div>
                         </div>
-
                         <div className="bookmark">
                             <div className="top">
                                 <div className="category school">School</div>
@@ -66,9 +62,8 @@ class Bookmarks extends Component {
                                 <h3 className="link"><i className="far fa-file-alt"></i> View Doc</h3>
                             </div>
                         </div>
-
                     </div>
-
+                    
                 </div>
             </div>
         );

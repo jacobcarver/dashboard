@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600');
+
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #303030;
+}
+
+$main: #ff4b4b; // Main Color Themes: Blue - #4b8aff; Red - #ff4b4b; Orange - #ffc04b;
+
 $blue: #53c0ff;
 $lightBlue: #E3F2FD;
 
@@ -7,14 +20,7 @@ $lightPink: #FDE4EC;
 $green: #66BA6A;
 $lightGreen: #E8F5E9;
 
-$main: #4b8aff;
+// Switch green with purple colors
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600');
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    color: #303030;
-}
+// $purple: #6c4bff;
+// $lightPurple: #ece8ff;

@@ -108,16 +108,16 @@
                 font-weight: 300;
                 font-size: 0.8rem;
                 &.blue {
-                    color: #5393FE;
-                    background: #E3F2FD;
+                    color: $blue;
+                    background: $lightBlue;
                 }
                 &.green {
-                    color: #66BA6A;
-                    background: #E8F5E9;
+                    color: $green;
+                    background: $lightGreen;
                 }
                 &.yellow {
-                    color: #F6538B;
-                    background: #FDE4EC;
+                    color: $pink;
+                    background: $lightPink;
                 }
             }
             h2 {
@@ -153,7 +153,12 @@
     }
 }
 @media screen and (max-width: 768px) {
-
+    .Events {
+        #events-content {
+            grid-template-columns:  1fr;
+            grid-gap: 30px;
+        }
+    }
 }
 @media screen and (max-width: 480px) {
 

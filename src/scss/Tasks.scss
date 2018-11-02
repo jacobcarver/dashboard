@@ -31,6 +31,12 @@
                     position: relative;
                     cursor: pointer;
                     padding: 0;
+                    -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Safari */
+                    -khtml-user-select: none; /* Konqueror HTML */
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none;
                 }
                 // Box.
                 & + label:before {
@@ -46,9 +52,7 @@
                     }
                     // Box focus
                     &:focus + label:before {
-                        -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
-                        -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
-                        box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                        
                     }
 
                     &:checked + label {
@@ -58,9 +62,12 @@
                     // Box checked
                     &:checked + label:before {
                         background: $main;
+                        -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                        -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
+                        box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.2);
                     }
 
-                    // Checkmark. Could be replaced with an image
+                    // Checkmark, can be replaced with an image
                     &:checked + label:after {
                         content: '';
                         position: absolute;

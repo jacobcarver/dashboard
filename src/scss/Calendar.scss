@@ -22,7 +22,6 @@
             margin-bottom: 15px;
             grid-row-gap: 15px;
             grid-column-gap: 5%;
-            // padding: 0 30px;
             span {
                 color: $main;
             }
@@ -75,7 +74,7 @@
 
             }
             #days {
-
+                grid-row-gap: 30px;
             }
         }
     }

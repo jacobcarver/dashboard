@@ -7,7 +7,7 @@ class Tasks extends Component {
             <div className="Tasks">
                 <div id="tasks">
                     <div className="header">
-                        <h2>{"Your Tasks"}</h2>
+                        <h2>Your Tasks</h2>
                     </div>
                     <div className="content">
                         <ul className="unstyled">

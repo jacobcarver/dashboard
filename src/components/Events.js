@@ -5,6 +5,7 @@ class Events extends Component {
     render() {
         return (
             <div className="Events">
+
                 <div id="events-top">
                     <div className="header">
                         <div className="title">
@@ -51,6 +52,7 @@ class Events extends Component {
                         <span>Nov. 17, 2018</span>
                     </div>
                 </div>
+                
             </div>
         );
     }

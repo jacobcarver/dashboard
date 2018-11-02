@@ -16,12 +16,12 @@
             }
             .bookmark-add {
                 #bookmark-add {
-                    color: #4b8aff;
+                    color: $main;
                     cursor: pointer;
                     font-size: 0.75rem;
                     font-weight: 600;
                     i {
-                        color: #4b8aff;
+                        color: $main;
                         padding-left: 15px;
                         font-size: 0.9rem;
                     }
@@ -74,17 +74,17 @@
                         &.link {
                             // min-width: 150px;
                             text-align: right;
-                            color: #4b8aff;
+                            color: $main;
                             transition: all 0.3s ease-in-out;
                             cursor: pointer;
                             border-bottom: 2px solid transparent;
                             font-size: 0.9rem;
                             &:hover {
-                                border-bottom: 2px solid #4b8aff;
+                                border-bottom: 2px solid $main;
                             }
                             i {
                                 margin-right: 5px;
-                                color: #4b8aff;
+                                color: $main;
                             }
                         }
                     }

@@ -9,9 +9,7 @@ class Header extends Component {
                     <h4>Dashboard</h4>
                 </div>
                 <div className="profile">
-                    <div className="img">
-
-                    </div>
+                    <div className="img"></div>
                     <div className="edit">
                         Jeremy <i className="fas fa-caret-down"></i>
                     </div>

@@ -6,6 +6,7 @@ class Weather extends Component {
         return (
             <div className="Weather">
                 <div id="weather">
+
                     <div className="time">
                         <h5 id="time">6:24</h5>
                         <div className="am-pm">
@@ -13,6 +14,7 @@ class Weather extends Component {
                             <span>PM</span>
                         </div>
                     </div>
+
                     <div className="forecast">
                         <div className="col">
                             <span className="day">TODAY</span>
@@ -30,6 +32,7 @@ class Weather extends Component {
                             <span className="high-low"> 38 / 16</span>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         );

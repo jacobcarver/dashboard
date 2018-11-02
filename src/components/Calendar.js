@@ -6,6 +6,7 @@ class Calendar extends Component {
         return (
             <div className="Calendar">
                 <div id="calendar">
+
                     <div className="month-selection">
                         <div className="left-arrow">
                             <i className="fas fa-arrow-left"></i>
@@ -17,6 +18,8 @@ class Calendar extends Component {
                             <i className="fas fa-arrow-right"></i>
                         </div>
                     </div>
+
+                    {/* 7 columns */}
                     <div className="weekdays">
                         <span>Mon</span>
                         <span>Tue</span>
@@ -26,7 +29,8 @@ class Calendar extends Component {
                         <span>Sat</span>
                         <span>Sun</span>
                     </div>
-                    {/* 5 (height) x 7 (width) */}
+
+                    {/* 5 rows x 7 columns */}
                     <div id="days">
                         <div className="day empty">28</div>
                         <div className="day empty">29</div>
@@ -64,6 +68,7 @@ class Calendar extends Component {
                         <div className="day">30</div>
                         <div className="day empty">1</div>
                     </div>
+
                 </div>
             </div>
         );

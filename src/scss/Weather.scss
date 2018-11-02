@@ -4,12 +4,17 @@
     background: white;
     #weather {
         cursor: default;
+
+        height: 250px;
+        display: flex;
+        flex-direction: column;
         .time {
             background: $main;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 15px;
+            height: 30%;
             &:hover {
                 .am-pm {
                     transform: translate3d(0, -8px, 0);
@@ -57,8 +62,9 @@
                 justify-content: center;
                 align-items: center;
                 background: white;
-                width: 33%;
+                width: 33.33%;
                 border-right: 2px solid #fafafa;
+                transition: all 0.3s ease-in-out;
                 &:last-of-type {
                     border: none;
                 }
@@ -73,7 +79,10 @@
                 .high-low {
                     font-size: 0.825rem;
                     font-weight: 300;
-                    color: #c0c0c0;
+                    color: #e0e0e0;
+                }
+                &:hover {
+                    background: #fafafa;
                 }
             }
         }
