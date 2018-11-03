@@ -32,7 +32,7 @@ class Events extends Component {
                         <span>Oct. 30, 2018</span>
                     </div>
                     <div className="event">
-                        <div className="type green">Personal</div>
+                        <div className="type purple">Personal</div>
                         <h2>Finish 3D clay art piece</h2>
                         <span>Oct. 31, 2018</span>
                     </div>

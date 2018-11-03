@@ -60,12 +60,12 @@
                         }
                     }
                     &.personal {
-                        background: linear-gradient(to right, $green 50%, $lightGreen 50%);
+                        background: linear-gradient(to right, $purple 50%, $lightPurple 50%);
                         background-size: 210% 100%;
                         background-position: right bottom;
                         margin: 0;
                         span {
-                            color: $green;
+                            color: $purple;
                         }
                         &:hover {
                             background-position: left bottom;
@@ -111,9 +111,9 @@
                     color: $blue;
                     background: $lightBlue;
                 }
-                &.green {
-                    color: $green;
-                    background: $lightGreen;
+                &.purple {
+                    color: $purple;
+                    background: $lightPurple;
                 }
                 &.yellow {
                     color: $pink;

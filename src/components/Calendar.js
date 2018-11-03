@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import '../scss/Calendar.scss';
 
 class Calendar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            currentDate: new Date().getDate(),
+        }
+    }
     render() {
+        console.log(document.getElementById('days'));
+        console.log(document.getElementsByClassName('month-days'));
         return (
             <div className="Calendar">
                 <div id="calendar">
@@ -31,7 +39,7 @@ class Calendar extends Component {
                     </div>
 
                     {/* 5 rows x 7 columns */}
-                    <div id="days">
+                    <div id="days" className="month-days">
                         <div className="day empty">28</div>
                         <div className="day empty">29</div>
                         <div className="day empty">30</div>
@@ -46,7 +54,7 @@ class Calendar extends Component {
                         <div className="day">8</div>
                         <div className="day">9</div>
                         <div className="day">10</div>
-                        <div className="day current">11</div>
+                        <div className="day">11</div>
                         <div className="day">12</div>
                         <div className="day">13</div>
                         <div className="day">14</div>

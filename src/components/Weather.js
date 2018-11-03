@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 import '../scss/Weather.scss';
 
 class Weather extends Component {
+    constructor() {
+        super();
+        this.state = {
+            hour: new Date().getHours(),
+            minutes: new Date().getMinutes(),
+            apiKey: '&appid=660ca7883daebef4c461e0fe71682b13',
+        }
+    }
     render() {
+        setTimeout(() => {
+            this.setState({ minutes: new Date().getMinutes() })
+        }, 60000);
         return (
             <div className="Weather">
                 <div id="weather">
 
                     <div className="time">
-                        <h5 id="time">6:24</h5>
+                        <h5 id="time">{this.state.hour + ':' + this.state.minutes}</h5>
                         <div className="am-pm">
                             <span>AM</span>
                             <span>PM</span>
