@@ -7,13 +7,19 @@ class Weather extends Component {
         this.state = {
             hour: new Date().getHours(),
             minutes: new Date().getMinutes(),
-            apiKey: '&appid=660ca7883daebef4c461e0fe71682b13',
+            weekdays: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
         }
     }
     render() {
+        console.log(this.state.weekdays[new Date().getDay() + 2]);
         setTimeout(() => {
             this.setState({ minutes: new Date().getMinutes() })
         }, 60000);
+        if (this.state.hour > 12) {
+            console.log('pm')
+        } else {
+            console.log('am');
+        }
         return (
             <div className="Weather">
                 <div id="weather">
@@ -21,7 +27,7 @@ class Weather extends Component {
                     <div className="time">
                         <h5 id="time">{this.state.hour + ':' + this.state.minutes}</h5>
                         <div className="am-pm">
-                            <span>AM</span>
+                            <span className="active">AM</span>
                             <span>PM</span>
                         </div>
                     </div>
