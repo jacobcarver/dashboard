@@ -10,8 +10,11 @@
             margin-bottom: 30px;
             justify-content: space-between;
             font-weight: 600;
-            i {
+            .arrow {
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                padding: 5px;
             }
         }
         .weekdays {

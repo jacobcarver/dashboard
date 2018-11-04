@@ -15,19 +15,6 @@
             justify-content: center;
             padding: 15px;
             height: 30%;
-            &:hover {
-                .am-pm {
-                    transform: translate3d(0, -8px, 0);
-                    span {
-                        &:first-of-type {
-                            opacity: 0;
-                        }
-                        &:last-of-type {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
             #time {
                 font-size: 1.7rem;
                 font-weight: 300;
@@ -37,19 +24,12 @@
                 margin-left: 15px;
                 display: flex;
                 flex-direction: column;
-                transform: translate3d(0, 8px, 0);
                 transition: all 0.4s ease-in-out;
                 span {
                     transition: all 0.4s ease-in-out;
                     font-size: 0.75rem;
                     font-weight: 300;
                     color: white;
-                    &:first-of-type {
-
-                    }
-                    &:last-of-type {
-                        opacity: 0;
-                    }
                 }
             }
         }
