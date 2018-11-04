@@ -7,44 +7,45 @@ class Weather extends Component {
         this.state = {
             hour: new Date().getHours(),
             minutes: new Date().getMinutes(),
-            weekdays: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+            weekdays: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+        }
+        this.current = {
+            currentDay: this.state.weekdays[new Date().getDay()],
+            day2: this.state.weekdays[new Date().getDay() + 1],
+            day3: this.state.weekdays[new Date().getDay() + 2],
         }
     }
     render() {
-        console.log(this.state.weekdays[new Date().getDay() + 2]);
         setTimeout(() => {
-            this.setState({ minutes: new Date().getMinutes() })
-        }, 60000);
-        if (this.state.hour > 12) {
-            console.log('pm')
-        } else {
-            console.log('am');
-        }
+            this.setState({ minutes: new Date().getMinutes() });
+        }, 10000);
         return (
             <div className="Weather">
                 <div id="weather">
 
                     <div className="time">
-                        <h5 id="time">{this.state.hour + ':' + this.state.minutes}</h5>
+                        <h5 id="time">
+                            {`${12 < this.state.hour ? this.state.hour - 12 + ':' : this.state.hour + ':'}`}
+                            {`${10 > this.state.minutes ? '0' + this.state.minutes : this.state.minutes }`}
+                        </h5>
                         <div className="am-pm">
-                            <span className="active">AM</span>
-                            <span>PM</span>
+                            <span>{`${12 < this.state.hour ? 'PM' : 'AM'}`}</span>
                         </div>
                     </div>
 
                     <div className="forecast">
                         <div className="col">
-                            <span className="day">TODAY</span>
+                            <span className="day">{this.current.currentDay}</span>
                             <i className="fas fa-cloud"></i>
                             <span className="high-low">43 / 34</span>
                         </div>
                         <div className="col">
-                            <span className="day">TUE</span>
+                            <span className="day">{this.current.day2}</span>
                             <i className="fas fa-tint"></i>
                             <span className="high-low">55 / 37</span>
                         </div>
                         <div className="col">
-                            <span className="day">WED</span>
+                            <span className="day">{this.current.day3}</span>
                             <i className="far fa-snowflake"></i>
                             <span className="high-low"> 38 / 16</span>
                         </div>
