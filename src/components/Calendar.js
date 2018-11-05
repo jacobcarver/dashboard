@@ -5,10 +5,13 @@ class Calendar extends Component {
     constructor() {
         super();
         this.state = {
+            // array of 12 months (calendar year)
             months: ['January 2018', 'February 2018', 'March 2018', 'April 2018', 'May 2018', 'June 2018', 'July 2018', 'August 2018', 'September 2018', 'October 2018', 'November 2018', 'Devember 2018', 'January 2019']
         }
         this.current = {
+            // current day of the month
             currentDate: new Date().getDate(),
+            // current month
             currentMonth: this.state.months[new Date().getMonth()],
         }
     }
@@ -28,6 +31,7 @@ class Calendar extends Component {
                             <i className="fas fa-arrow-left"></i>
                         </div>
                         <div className="active-month">
+                            {/* current month */}
                             <h2>{this.current.currentMonth}</h2>
                         </div>
                         <div className="arrow right-arrow" onClick={this.rightClick}>

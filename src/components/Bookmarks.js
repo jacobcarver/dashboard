@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import '../scss/Bookmarks.scss';
 
 class Bookmarks extends Component {
-    constructor() {
-        super();
-        this.state = { comp: 'bookmarks' };
-    }
-
     render() {
         return (
             <div className="Bookmarks">

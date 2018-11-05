@@ -70,12 +70,6 @@
 @media screen and (max-width: 992px) {
     .Calendar {
         #calendar {
-            .month-selection {
-
-            }
-            .weekdays {
-
-            }
             #days {
                 grid-row-gap: 30px;
             }
@@ -86,5 +80,15 @@
 
 }
 @media screen and (max-width: 480px) {
-
+    .Calendar {
+        #calendar {
+            .weekdays {
+                grid-column-gap: 2%;
+            }
+            #days {
+                grid-row-gap: 15px;
+                grid-column-gap: 2%;
+            }
+        }
+    }
 }
