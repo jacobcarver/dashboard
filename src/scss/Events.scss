@@ -17,17 +17,19 @@
             .event-types {
                 display: flex;
                 div {
-                    padding: 5px 10px;
+                    height: 35px;
+                    width: 35px;
                     background: white;
                     margin-right: 15px;
                     border-radius: 50%;
-                    color: #656565;
-                    font-weight: 600;
                     background-position: right bottom;
                     transition: all .5s ease-out;
                     font-size: 0.9rem;
                     border: 1px solid white;
                     font-weight: 300;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     span {
                         transition: all 0.4s ease-in-out;
                     }
@@ -149,6 +151,19 @@
             grid-gap: 30px;
             padding: 0 30px;
             margin-top: 15px;
+            .event {
+                &:hover {
+                    transform: initial;
+                }
+                .type {
+                }
+                h2 {
+                    max-width: none;
+                }
+                span {
+                    
+                }
+            }
         }
     }
 }
@@ -158,6 +173,38 @@
             grid-template-columns:  1fr;
             grid-gap: 30px;
             padding: 0;
+        }
+        #events-top {
+            .header {
+                .title {
+
+                }
+                .event-types {
+                    div {
+                        span {
+                            
+                        }
+                        span {
+
+                        }
+                    }
+                }
+            }
+        }
+        #events-content {
+            .event {
+                &:hover {
+                    transform: initial;
+                }
+                .type {
+                }
+                h2 {
+                    max-width: none;
+                }
+                span {
+                    
+                }
+            }
         }
     }
 }

@@ -4,8 +4,6 @@
     background: white;
     #weather {
         cursor: default;
-
-        height: 250px;
         display: flex;
         flex-direction: column;
         .time {
@@ -14,9 +12,8 @@
             align-items: center;
             justify-content: center;
             padding: 15px;
-            height: 30%;
             #time {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
                 font-weight: 300;
                 color: white;
             }
@@ -35,9 +32,8 @@
         }
         .forecast {
             display: flex;
-            padding: 15px 0;
             .col {
-                padding: 30px 5px;
+                padding: 50px 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -45,6 +41,11 @@
                 background: white;
                 width: 33.33%;
                 border-right: 2px solid #fafafa;
+                &:hover {
+                    img {
+	                    animation: float 2s ease-in-out infinite;
+                    }
+                }
                 &:last-of-type {
                     border: none;
                 }
@@ -52,11 +53,15 @@
                     font-weight: 300;
                 }
                 img {
-                    margin-bottom: 15px;
+                    height: 45px;
+                    width: 45px;
+                    margin: 0 0 15px;
+                    transition: all 0.3s ease-in-out;
                 }
                 .high-low {
-                    font-size: 0.825rem;
+                    font-size: 0.925rem;
                     font-weight: 300;
+                    color: #c7c7c7;
                 }
             }
         }
@@ -74,4 +79,16 @@
 }
 @media screen and (max-width: 480px) {
 
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }

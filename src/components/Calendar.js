@@ -15,28 +15,17 @@ class Calendar extends Component {
             currentMonth: this.state.months[new Date().getMonth()],
         }
     }
-    leftClick() {
-        console.log('Left arrow clicked');
-    }
-    rightClick() {
-        console.log('Right arrow clicked');
-    }
     render() {
         return (
             <div className="Calendar">
                 <div id="calendar">
 
                     <div className="month-selection">
-                        <div className="arrow left-arrow" onClick={this.leftClick}>
-                            <i className="fas fa-arrow-left"></i>
-                        </div>
                         <div className="active-month">
                             {/* current month */}
                             <h2>{this.current.currentMonth}</h2>
                         </div>
-                        <div className="arrow right-arrow" onClick={this.rightClick}>
-                            <i className="fas fa-arrow-right"></i>
-                        </div>
+                        <i className="far fa-calendar"></i>
                     </div>
 
                     {/* 7 columns */}

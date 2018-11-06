@@ -7,11 +7,17 @@ body {
 .App {
     // Header Component
     .Header {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
         -webkit-box-shadow: 0px 10px 10px -2px rgba(228, 228, 228, 0.2);
         -moz-box-shadow: 0px 10px 10px -2px rgba(228, 228, 228, 0.2);
         box-shadow: 0px 10px 10px -2px rgba(228, 228, 228, 0.2);
     }
     .dashboard {
+        position: absolute;
+        top: 10%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 60px;
@@ -110,6 +116,7 @@ body {
         .dashboard {
             grid-gap: 30px;
             padding: 30px;
+            top: 17.5%;
             // Events Component
             .Events {
                 grid-column: 1 / 13;

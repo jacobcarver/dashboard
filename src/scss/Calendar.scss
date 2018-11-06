@@ -9,12 +9,13 @@
             display: flex;
             margin-bottom: 30px;
             justify-content: space-between;
+            align-items: center;
             font-weight: 600;
-            .arrow {
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                padding: 5px;
+            h2 {
+
+            }
+            i {
+                font-size: 1.4rem;
             }
         }
         .weekdays {

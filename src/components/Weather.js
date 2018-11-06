@@ -20,6 +20,9 @@ class Weather extends Component {
             day3: this.state.weekdays[new Date().getDay() + 2],
             url: 'http://api.openweathermap.org/data/2.5/forecast?',
         }
+        console.log('col-1: ' + this.state.hour + '-' + (this.state.hour + 3));
+        console.log('col-2: ' + (this.state.hour + 3) +  '-' + (this.state.hour + 6));
+        console.log('col-3: ' + (this.state.hour + 6) + '-' + (this.state.hour + 9));
     }
 
     componentWillMount() {
@@ -39,12 +42,12 @@ class Weather extends Component {
 
                         // parse api data
                         var data = JSON.parse(body);
-                        // console.log(data);
+                        console.log(data);
 
                         // image icon links
-                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
-                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[1].weather[0].icon + '.png';
-                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png';
+                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[0].weather[0].icon + '.svg');
+                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[1].weather[0].icon + '.svg');
+                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[2].weather[0].icon + '.svg');
 
                         // image alt values
                         document.getElementById('day1').childNodes[0].attributes[1].nodeValue = 'alt change';
@@ -61,14 +64,15 @@ class Weather extends Component {
                 });
             },
             (error) => {
-                console.log('Error Getting Loaction: ' + error)
+                console.log('Error Getting Loaction: ' + error);
             },
+            { enableHighAccuracy: true, }
         );
     }
 
     render() {
         setTimeout(() => {
-            this.setState({ minutes: new Date().getMinutes() });
+            this.setState({ minutes: new Date().getMinutes(), hour: new Date().getHours() });
         }, 10000);
         return (
             <div className="Weather">
@@ -83,21 +87,24 @@ class Weather extends Component {
                         </h5>
                         <div className="am-pm">
                             {/* checks if the time is am or pm */}
-                            <span>{`${12 < this.state.hour ? 'PM' : 'AM'}`}</span>
+                            <span>{`${12 <= this.state.hour ? 'PM' : 'AM'}`}</span>
                         </div>
                     </div>
 
                     <div className="forecast">
                         <div className="col" id="day1">
-                            <img src="http://openweathermap.org/img/w/10d.png" alt="Weather Icon"></img>
+                            {/* default icon/alt and high/low */}
+                            <img src={require('../img/01d.svg')} alt="Weather Icon"></img>
                             <span className="high-low">h / l</span>
                         </div>
                         <div className="col" id="day2">
-                            <img src="http://openweathermap.org/img/w/10d.png" alt="Weather Icon"></img>
+                            {/* default icon/alt and high/low */}
+                            <img src={require('../img/01d.svg')} alt="Weather Icon"></img>
                             <span className="high-low">h / l</span>
                         </div>
                         <div className="col" id="day3">
-                            <img src="http://openweathermap.org/img/w/10d.png" alt="Weather Icon"></img>
+                            {/* default icon/alt and high/low */}
+                            <img src={require('../img/01d.svg')} alt="Weather Icon"></img>
                             <span className="high-low">h / l</span>
                         </div>
                     </div>

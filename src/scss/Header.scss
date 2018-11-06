@@ -1,38 +1,109 @@
 @import 'variables';
 
 .Header {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    background: white;
-    align-items: center;
-    .logo {
-        h4 {
-            font-size: 1.5rem;
+    #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        background: white;
+        align-items: center;
+        .logo {
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            .img {
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                margin-right: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+                -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+                box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
+                color: white;
+                background: $main;
+                font-weight: 600;
+            }
+            .edit {
+                cursor: pointer;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                i {
+                    margin-left: 30px;
+                    font-size: 1.4rem;
+                    transition: all 0.4s ease-in;
+                    &.active {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
     }
-    .profile {
+    #menu {
+        background: $main;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        z-index: 30;
+        right: 30px;
         display: flex;
-        align-items: center;
-        .img {
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            margin-right: 30px;
-            background-image: url('https://randomuser.me/api/portraits/men/32.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            -webkit-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
-            -moz-box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
-            box-shadow: 0px 0px 21px 3px rgba(163,163,163,0.3);
-        }
-        .edit {
+        flex-direction: column;
+        justify-content: space-between;
+        span {
             cursor: pointer;
-            font-weight: 300;
-            i {
-                margin-left: 15px;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            color: white;
+            text-decoration: underline;
+            text-transform: capitalize;
+            &:last-of-type {
+                margin-top: 15px;
             }
+        }
+        #edit-name {
+            opacity: 0.5;
+            align-items: center;
+            display: none;
+            input {
+                background: none;
+                border: none;
+                border-bottom: 2px solid white;
+                font-size: 1rem;
+                color: white;
+                padding: 2px 0;
+                margin-right: 15px;
+                border-radius: 0;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: white;
+                }
+            }
+            i {
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+    }
+    #menu.active {
+        height: auto;
+        padding: 30px;
+        span {
+            opacity: 1;
+        }
+        #edit-name.active {
+            display: flex;
+            margin-top: 15px;
         }
     }
 }
@@ -47,5 +118,33 @@
 
 }
 @media screen and (max-width: 480px) {
+    #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        flex-direction: column;
+        background: white;
+        align-items: center;
+        .logo {
+            margin-bottom: 15px;
+        }
+        .edit {
+            font-size: 1.4rem;
+        }
+    }
+    #menu {
+        width: 100%;
+        justify-content: center;
+        right: 0px !important;
+        span {
+            font-size: 1.2rem;
+        }
+        input {
+            font-size: 1.2rem !important;
+        }
+        padding: 0 30px;
+        &.active {
 
+        }
+    }
 }
