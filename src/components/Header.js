@@ -7,14 +7,16 @@ class Header extends Component {
         this.state = {
             userName: 'Jeremy',
         }
-        this.handleClick = this.handleClick.bind(this);
     }
-    handleClick() {
-        var userInput = document.querySelector('input');
-        this.setState({ userName: userInput.value });
-        userInput.value = '';
 
+    handleChange(e) {
+        const userName = e.target.value;
+        this.changename(userName);
     }
+    changename(userName) {
+        this.setState({userName});
+    }
+
     render() {
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('active');
@@ -53,8 +55,7 @@ class Header extends Component {
                     <span onClick={changePicture}>Change color</span>
                     <span onClick={editName}>Edit name</span>
                     <div id="edit-name">
-                        <input type="text" placeholder="Enter Name"></input>
-                        <i className="fas fa-plus" onClick={this.handleClick}></i>
+                        <input type="text" placeholder="Enter Name" onChange={this.handleChange.bind(this)}></input>
                     </div>
                 </div>
             </div>

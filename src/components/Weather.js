@@ -14,7 +14,7 @@ class Weather extends Component {
             lng: '',
         }
         this.current = {
-            url: 'http://api.openweathermap.org/data/2.5/forecast?',
+            url: 'https://api.openweathermap.org/data/2.5/forecast?',
             params: this.state.apiKey + this.state.unit,
         }
     }
@@ -41,14 +41,15 @@ class Weather extends Component {
                         var data = JSON.parse(body);
                         console.log(data);
 
-                        // image icon links
-                        // document.getElementById('day1').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[0].weather[0].icon + '.svg');
-                        // document.getElementById('day2').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[1].weather[0].icon + '.svg');
-                        // document.getElementById('day3').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[2].weather[0].icon + '.svg');
+                        // custom icon links
+                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[0].weather[0].icon + '.svg');
+                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[1].weather[0].icon + '.svg');
+                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[2].weather[0].icon + '.svg');
 
-                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
-                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[1].weather[0].icon + '.png';
-                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png';
+                        // api icon links
+                        // document.getElementById('day1').childNodes[0].attributes[0].nodeValue = 'https://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
+                        // document.getElementById('day2').childNodes[0].attributes[0].nodeValue = 'https://openweathermap.org/img/w/' + data.list[1].weather[0].icon + '.png';
+                        // document.getElementById('day3').childNodes[0].attributes[0].nodeValue = 'https://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png';
 
                         // image alt values
                         document.getElementById('day1').childNodes[0].attributes[1].nodeValue = 'alt change';
