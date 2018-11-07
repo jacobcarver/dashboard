@@ -78,7 +78,10 @@
 
 }
 @media screen and (max-width: 480px) {
-
+    img {
+        height: 35px;
+        width: 35px;
+    }
 }
 
 @keyframes float {

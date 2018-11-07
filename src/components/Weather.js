@@ -8,21 +8,15 @@ class Weather extends Component {
         this.state = {
             hour: new Date().getHours(),
             minutes: new Date().getMinutes(),
-            weekdays: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
             apiKey: '&APPID=660ca7883daebef4c461e0fe71682b13',
             unit: '&units=imperial',
             lat: '',
             lng: '',
         }
         this.current = {
-            currentDay: this.state.weekdays[new Date().getDay()],
-            day2: this.state.weekdays[new Date().getDay() + 1],
-            day3: this.state.weekdays[new Date().getDay() + 2],
             url: 'http://api.openweathermap.org/data/2.5/forecast?',
+            params: this.state.apiKey + this.state.unit,
         }
-        console.log('col-1: ' + this.state.hour + '-' + (this.state.hour + 3));
-        console.log('col-2: ' + (this.state.hour + 3) +  '-' + (this.state.hour + 6));
-        console.log('col-3: ' + (this.state.hour + 6) + '-' + (this.state.hour + 9));
     }
 
     componentWillMount() {
@@ -36,8 +30,11 @@ class Weather extends Component {
                 this.setState({
                     lat: lat,
                     lng: lng
-                })
-                request(this.current.url + 'lat=' + this.state.lat + '&lon=' + this.state.lng + this.state.apiKey + this.state.unit, function (error, response, body) {
+                });
+                // url location params
+                var location = 'lat=' + this.state.lat + '&lon=' + this.state.lng;
+                // request
+                request(this.current.url + location + this.current.params, function (error, response, body) {
                     if (!error && response.statusCode === 200) {
 
                         // parse api data
@@ -45,9 +42,13 @@ class Weather extends Component {
                         console.log(data);
 
                         // image icon links
-                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[0].weather[0].icon + '.svg');
-                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[1].weather[0].icon + '.svg');
-                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[2].weather[0].icon + '.svg');
+                        // document.getElementById('day1').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[0].weather[0].icon + '.svg');
+                        // document.getElementById('day2').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[1].weather[0].icon + '.svg');
+                        // document.getElementById('day3').childNodes[0].attributes[0].nodeValue = require('../img/' + data.list[2].weather[0].icon + '.svg');
+
+                        document.getElementById('day1').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
+                        document.getElementById('day2').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[1].weather[0].icon + '.png';
+                        document.getElementById('day3').childNodes[0].attributes[0].nodeValue = 'http://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png';
 
                         // image alt values
                         document.getElementById('day1').childNodes[0].attributes[1].nodeValue = 'alt change';
