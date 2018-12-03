@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Electrical Storm</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M42 40.1h7a13 13 0 1 0 0-26h-.5a17 17 0 0 0-32.3 4.4A11 11 0 1 0 13 40.1h9"
+  fill="none" stroke="#4b8aff" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#4b8aff" stroke-miterlimit="10"
+  stroke-width="2" d="M36 35.6L26 48.1h8L24.4 60m-11-13.9l-4.8 6h6l-4.8 6m37-12l-4.8 6h6l-4.8 6"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>
