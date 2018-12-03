@@ -48,36 +48,36 @@ class Calendar extends Component {
                         <div className="day empty">28</div>
                         <div className="day empty">29</div>
                         <div className={`day ${1 === this.current.currentDate ? 'current' : ''}`}>1</div>
-                        <div className={`day ${3 === this.current.currentDate ? 'current' : ''}`}>2</div>
-                        <div className={`day ${4 === this.current.currentDate ? 'current' : ''}`}>3</div>
-                        <div className={`day ${5 === this.current.currentDate ? 'current' : ''}`}>4</div>
-                        <div className={`day ${6 === this.current.currentDate ? 'current' : ''}`}>5</div>
-                        <div className={`day ${7 === this.current.currentDate ? 'current' : ''}`}>6</div>
-                        <div className={`day ${8 === this.current.currentDate ? 'current' : ''}`}>7</div>
-                        <div className={`day ${9 === this.current.currentDate ? 'current' : ''}`}>8</div>
-                        <div className={`day ${10 === this.current.currentDate ? 'current' : ''}`}>9</div>
-                        <div className={`day ${11 === this.current.currentDate ? 'current' : ''}`}>10</div>
-                        <div className={`day ${12 === this.current.currentDate ? 'current' : ''}`}>11</div>
-                        <div className={`day ${13 === this.current.currentDate ? 'current' : ''}`}>12</div>
-                        <div className={`day ${14 === this.current.currentDate ? 'current' : ''}`}>13</div>
-                        <div className={`day ${15 === this.current.currentDate ? 'current' : ''}`}>14</div>
-                        <div className={`day ${16 === this.current.currentDate ? 'current' : ''}`}>15</div>
-                        <div className={`day ${17 === this.current.currentDate ? 'current' : ''}`}>16</div>
-                        <div className={`day ${18 === this.current.currentDate ? 'current' : ''}`}>17</div>
-                        <div className={`day ${19 === this.current.currentDate ? 'current' : ''}`}>18</div>
-                        <div className={`day ${20 === this.current.currentDate ? 'current' : ''}`}>19</div>
-                        <div className={`day ${21 === this.current.currentDate ? 'current' : ''}`}>20</div>
-                        <div className={`day ${22 === this.current.currentDate ? 'current' : ''}`}>21</div>
-                        <div className={`day ${23 === this.current.currentDate ? 'current' : ''}`}>22</div>
-                        <div className={`day ${24 === this.current.currentDate ? 'current' : ''}`}>23</div>
-                        <div className={`day ${25 === this.current.currentDate ? 'current' : ''}`}>24</div>
-                        <div className={`day ${26 === this.current.currentDate ? 'current' : ''}`}>25</div>
-                        <div className={`day ${27 === this.current.currentDate ? 'current' : ''}`}>26</div>
-                        <div className={`day ${28 === this.current.currentDate ? 'current' : ''}`}>27</div>
-                        <div className={`day ${29 === this.current.currentDate ? 'current' : ''}`}>28</div>
-                        <div className={`day ${30 === this.current.currentDate ? 'current' : ''}`}>29</div>
+                        <div className={`day ${2 === this.current.currentDate ? 'current' : ''}`}>2</div>
+                        <div className={`day ${3 === this.current.currentDate ? 'current' : ''}`}>3</div>
+                        <div className={`day ${4 === this.current.currentDate ? 'current' : ''}`}>4</div>
+                        <div className={`day ${5 === this.current.currentDate ? 'current' : ''}`}>5</div>
+                        <div className={`day ${6 === this.current.currentDate ? 'current' : ''}`}>6</div>
+                        <div className={`day ${7 === this.current.currentDate ? 'current' : ''}`}>7</div>
+                        <div className={`day ${8 === this.current.currentDate ? 'current' : ''}`}>8</div>
+                        <div className={`day ${9 === this.current.currentDate ? 'current' : ''}`}>9</div>
+                        <div className={`day ${10 === this.current.currentDate ? 'current' : ''}`}>10</div>
+                        <div className={`day ${11 === this.current.currentDate ? 'current' : ''}`}>11</div>
+                        <div className={`day ${12 === this.current.currentDate ? 'current' : ''}`}>12</div>
+                        <div className={`day ${13 === this.current.currentDate ? 'current' : ''}`}>13</div>
+                        <div className={`day ${14 === this.current.currentDate ? 'current' : ''}`}>14</div>
+                        <div className={`day ${15 === this.current.currentDate ? 'current' : ''}`}>15</div>
+                        <div className={`day ${16 === this.current.currentDate ? 'current' : ''}`}>16</div>
+                        <div className={`day ${17 === this.current.currentDate ? 'current' : ''}`}>17</div>
+                        <div className={`day ${18 === this.current.currentDate ? 'current' : ''}`}>18</div>
+                        <div className={`day ${19 === this.current.currentDate ? 'current' : ''}`}>19</div>
+                        <div className={`day ${20 === this.current.currentDate ? 'current' : ''}`}>20</div>
+                        <div className={`day ${21 === this.current.currentDate ? 'current' : ''}`}>21</div>
+                        <div className={`day ${22 === this.current.currentDate ? 'current' : ''}`}>22</div>
+                        <div className={`day ${23 === this.current.currentDate ? 'current' : ''}`}>23</div>
+                        <div className={`day ${24 === this.current.currentDate ? 'current' : ''}`}>24</div>
+                        <div className={`day ${25 === this.current.currentDate ? 'current' : ''}`}>25</div>
+                        <div className={`day ${26 === this.current.currentDate ? 'current' : ''}`}>26</div>
+                        <div className={`day ${27 === this.current.currentDate ? 'current' : ''}`}>27</div>
+                        <div className={`day ${28 === this.current.currentDate ? 'current' : ''}`}>28</div>
+                        <div className={`day ${29 === this.current.currentDate ? 'current' : ''}`}>29</div>
                         <div className={`day ${30 === this.current.currentDate ? 'current' : ''}`}>30</div>
-                        <div className={`day ${30 === this.current.currentDate ? 'current' : ''}`}>31</div>
+                        <div className={`day ${31 === this.current.currentDate ? 'current' : ''}`}>31</div>
                         <div className="day empty">1</div>
                         <div className="day empty">2</div>
                         <div className="day empty">3</div>
