@@ -41,12 +41,8 @@ class Calendar extends Component {
 
                     {/* 5 rows x 7 columns */}
                     <div id="days" className="month-days">
-                        <div className="day empty">25</div>
-                        <div className="day empty">26</div>
-                        <div className="day empty">27</div>
-                        <div className="day empty">28</div>
-                        <div className="day empty">28</div>
-                        <div className="day empty">29</div>
+                        <div className="day empty">30</div>
+                        <div className="day empty">31</div>
                         <div className={`day ${1 === this.current.currentDate ? 'current' : ''}`}>1</div>
                         <div className={`day ${2 === this.current.currentDate ? 'current' : ''}`}>2</div>
                         <div className={`day ${3 === this.current.currentDate ? 'current' : ''}`}>3</div>
@@ -80,9 +76,6 @@ class Calendar extends Component {
                         <div className={`day ${31 === this.current.currentDate ? 'current' : ''}`}>31</div>
                         <div className="day empty">1</div>
                         <div className="day empty">2</div>
-                        <div className="day empty">3</div>
-                        <div className="day empty">4</div>
-                        <div className="day empty">5</div>
                     </div>
 
                 </div>

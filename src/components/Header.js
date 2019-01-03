@@ -26,16 +26,9 @@ class Header extends Component {
         function editName() {
             document.getElementById('edit-name').classList.toggle('active');
         }
-        function changePicture() {
-            var colors = [
-                '#ff7e43',
-                '#aa6aff',
-                '#ff5252',
-                '#ff9ff2',
-                '#50c05f',
-                '#60d9dd'
-            ];
-            var randomNum = Math.floor(Math.random() * 6);  
+        function changeColor() {
+            var colors = ['#ff7e43', '#aa6aff', '#ff5252', '#ff9ff2', '#50c05f', '#60d9dd', '#27426d'];
+            var randomNum = Math.floor(Math.random() * 7);  
             document.querySelectorAll('.img')[0].style.backgroundColor = colors[randomNum];
         }
         return (
@@ -52,7 +45,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <div id="menu">
-                    <span onClick={changePicture}>Change color</span>
+                    <span onClick={changeColor}>Change color</span>
                     <span onClick={editName}>Edit name</span>
                     <div id="edit-name">
                         <input type="text" placeholder="Enter Name" onChange={this.handleChange.bind(this)}></input>
